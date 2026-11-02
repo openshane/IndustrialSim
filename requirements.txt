@@ -1,9 +1,6 @@
-# Core dependencies
-pymodbus>=3.0.0
-python-opcua>=2.7.0
-paho-mqtt>=1.6.1
-pyyaml>=6.0
-click>=8.1.0
+# Core virtual-device runtime. Install the package with: pip install -e .
+numpy>=1.24
+opencv-python>=4.5
 
-# Optional dependencies
-# opcua-asyncio  # For async OPC-UA support
+# Optional legacy protocol examples: pip install -e ".[protocols]"
+# Tests: pip install -e ".[test]"

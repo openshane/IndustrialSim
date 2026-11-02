@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "industrial-sim"
+version = "0.2.0"
+description = "Programmable virtual industrial devices for software integration tests"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "opencv-python>=4.5"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+protocols = ["pymodbus>=3.0", "opcua>=0.98.13", "paho-mqtt>=1.6", "pyyaml>=6", "click>=8"]
+
+[project.scripts]
+industrial-sim = "industrial_sim.__main__:main"
+
+[tool.setuptools]
+include-package-data = false
+packages = ["industrial_sim", "industrial_sim.core", "industrial_sim.devices", "industrial_sim.protocols", "industrial_sim.adapters", "industrial_sim.scenarios"]
+package-dir = {industrial_sim = "."}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

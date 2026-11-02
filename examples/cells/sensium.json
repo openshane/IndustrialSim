@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "devices": [
+    {"function": "ARRIVAL_IO", "kind": "io", "ports": 2},
+    {
+      "function": "INSPECTION_CAMERA",
+      "kind": "camera",
+      "seed": 42,
+      "parameters": {
+        "Width": 640,
+        "Height": 480,
+        "PixelFormat": "Mono8",
+        "TriggerMode": "Software"
+      },
+      "image_files": [],
+      "loop": true
+    },
+    {
+      "function": "GRINDING_ROBOT",
+      "kind": "flexiv",
+      "home_pose": [400, 0, 550, 180, 0, 180],
+      "home_joints": [0, 0, 0, 0, 0, 0, 0]
+    },
+    {"function": "STATUS_LIGHT", "kind": "warning_light"}
+  ],
+  "cycle": {
+    "io": "ARRIVAL_IO",
+    "camera": "INSPECTION_CAMERA",
+    "robot": "GRINDING_ROBOT",
+    "light": "STATUS_LIGHT",
+    "arrival_input": 3,
+    "complete_output": 4,
+    "running_output": 5,
+    "fault_output": 6,
+    "frame_count": 1,
+    "points": [
+      {"pose": [400, 0, 500, 180, 0, 180], "reference_frame": "base", "pose_target": "tcp"},
+      {"pose": [410, 0, 490, 180, 0, 180], "reference_frame": "base", "pose_target": "tcp"},
+      {"pose": [420, 10, 500, 180, 0, 180], "reference_frame": "base", "pose_target": "tcp"}
+    ],
+    "duration_ms": 300,
+    "arrival_timeout_ms": 1000,
+    "camera_timeout_ms": 1000,
+    "motion_timeout_ms": 5000
+  }
+}
