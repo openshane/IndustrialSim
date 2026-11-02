@@ -61,6 +61,15 @@ IndustrialSim/
 
 欢迎提交 Issue 和 PR！
 
+## Star History
+
+<a href="https://www.star-history.com/?repos=openshane%2FIndustrialSim&amp;type=date&amp;legend=top-left">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/image?repos=openshane/IndustrialSim&amp;type=Date&amp;theme=dark" />
+    <img alt="IndustrialSim Star History" src="https://api.star-history.com/image?repos=openshane/IndustrialSim&amp;type=Date" />
+  </picture>
+</a>
+
 ## License
 
 MIT License
